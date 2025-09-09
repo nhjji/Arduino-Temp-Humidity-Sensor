@@ -1,0 +1,100 @@
+// Include all libraries
+  #include <SPI.h>                 //for OLED & RTC
+  #include <Wire.h>                //for OLED & RTC
+  #include <Adafruit_GFX.h>        //for OLED
+  #include <Adafruit_SSD1306.h>    //for OLED  
+  #include <RTClib.h>              //for RTC
+  #include <DHT.h>                 //for DHT22
+
+
+//define all variables & constants
+  #define Type DHT22               //for DHT22
+
+  #define SCREEN_WIDTH 128         //width of OLED screen in pixels
+  #define SCREEN_HEIGHT 64         //height of OLED screen in pixels
+  #define SCREEN_ADDRESS 0x3C      //address for OLED
+  #define OLED_RESET -1            //reset pin
+
+  int sensorPin=2;
+  float humidity;
+  float tempC;
+  float tempF;
+  int dT = 1000;
+
+  int Month;
+  int Day;
+  int Year;
+  int Hour;
+  int Minute;
+  int Seconds;
+
+//create all objects
+  Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);       //for OLED
+  DHT HT(sensorPin, Type);                                                        //for DHT22
+  RTC_DS3231 myRTC;                                                               //for RTC
+
+
+void setup() {
+
+//start all objects
+  Wire.begin();
+  myRTC.begin();                                                        //for RTC
+  HT.begin();                                                           //for DHT22
+  delay(dT);
+  display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS);                  //for OLED
+  
+}
+
+void loop() {
+
+  DateTime now = myRTC.now();                         //set class equal to object for RTC
+  
+//set all variables
+  Month = now.month();                                //get time&date from RTC
+  Day = now.day();
+  Year = now.year();
+  Hour = now.hour();
+  Minute = now.minute();
+  Seconds = now.second();
+
+  humidity = HT.readHumidity();                       //get reading from from DHT22
+  tempC = HT.readTemperature();
+  tempF = HT.readTemperature(true);
+
+  display.clearDisplay();                            //clear display
+
+//set font, size & placememt for text on for OLED
+  display.setTextSize(1);                            //1:1 pixel scale
+  display.setTextColor(SSD1306_WHITE);               //text color
+  display.setCursor(0,0);                            //start at top left corner
+
+//display all on OLED
+  display.print(Month);
+  display.print("/");
+  display.print(Day);
+  display.print("/");
+  display.print(Year);
+  display.print("   ");
+  display.print(Hour);
+  display.print(":");
+  display.print(Minute);
+  display.print(":");
+  display.println(Seconds);
+
+  display.println();
+
+  display.println("Humidity:");
+  display.println(humidity);
+
+  display.println();
+
+  display.println("Temperature in C/F:");
+  display.print(tempC);
+  display.print(" C / ");
+  display.print(tempF);
+  display.println(" F");
+
+  display.display();
+
+  delay(dT);
+}
