@@ -37,6 +37,7 @@ All can be downloaded in the Library Manager in the Arduino IDE.
 | DAT | Pin 2 |
 
 **Wiring diagram:**
+![Wiring for the DHT22](DHT22-Setup/DHT22_wiring.PNG)
 
 Start by hooking up the module to the board as shown above with a breadboard and some DuPont wires, then, download the DHT Sensor Library by Adafruit and the Adafruit Unified Sensor library in the Arduino IDE’S Library Manager. The next step is to program it, and below you’ll see how I turned it on and the output I got in the Serial Monitor.   
 
