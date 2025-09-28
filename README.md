@@ -37,6 +37,7 @@ All can be downloaded in the Library Manager in the Arduino IDE.
 | DAT | Pin 2 |
 
 **Wiring diagram:**
+
 ![Wiring for the DHT22](DHT22-Setup/DHT22_wiring.PNG)
 
 Start by hooking up the module to the board as shown above with a breadboard and some DuPont wires, then, download the DHT Sensor Library by Adafruit and the Adafruit Unified Sensor library in the Arduino IDE’S Library Manager. The next step is to program it, and below you’ll see how I turned it on and the output I got in the Serial Monitor.   
@@ -55,6 +56,7 @@ I followed a tutorial by Paul McWhorter to figure out how to set it up which is 
 | SCL | A5 |
 
 **Wiring Diagram:**
+
 ![Wiring for the DS3231](DS3231-Setup/DS3231_wiring.PNG)
 
 Once again, start by hooking up the module to the board with a breadboard and dupont wires, as shown above, then you’ll need to download the Adafruit BusIO and RTClib libraries. After that, you’ll need to set the time and date once as shown in the code below. Please note that this module can also be equipped with a battery so that it can keep the time even when unplugged.
@@ -73,6 +75,8 @@ The RTClib library has many examples for how to set up this module that I referr
 | SDA | A4 |
 
 **Wiring Diagram:**
+
+![Wiring for the OLED](OLED-Setup/OLED_wiring.PNG)
 
 This is the example code provided by the Adafruit SSD1306 library, you can access it after downloading it in the Arduino IDE along with the Adafruit GFX Library. After the download go  to File > Examples > Examples from Custom Libraries > Adafruit SSD1306 > ssd1306_128x64_spi. 
 This is the code you should see and output you get from it on the OLED.
