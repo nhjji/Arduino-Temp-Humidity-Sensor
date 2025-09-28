@@ -55,6 +55,7 @@ I followed a tutorial by Paul McWhorter to figure out how to set it up which is 
 | SCL | A5 |
 
 **Wiring Diagram:**
+![Wiring for the DS3231](DS3231-Setup/DS3231_wiring.PNG)
 
 Once again, start by hooking up the module to the board with a breadboard and dupont wires, as shown above, then you’ll need to download the Adafruit BusIO and RTClib libraries. After that, you’ll need to set the time and date once as shown in the code below. Please note that this module can also be equipped with a battery so that it can keep the time even when unplugged.
 
