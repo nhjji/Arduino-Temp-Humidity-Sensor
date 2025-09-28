@@ -86,6 +86,8 @@ This is the code you should see and output you get from it on the OLED.
 ### Final product:
 **Wiring diagram:**
 
+![Wiring of the final product](Final-Setup/Full_wiring.PNG)
+
 Now all that’s left is to put it all together as shown in this diagram above, to program it we simply need to start by getting all our readings from the sensor and clock, and automatically show it on the screen, then repeat the process and refresh the values every second.
 
 This is how it should look:
