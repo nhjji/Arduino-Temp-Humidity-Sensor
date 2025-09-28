@@ -5,6 +5,7 @@ The goal of this project is to display the temperature and humidity along with a
 This could have many uses such as monitoring devices and components to make sure they don’t overheat or simply to make environmental observations. 
 Each module was set up and tested one by one to make sure each was working as it should, then it was all hooked up together on a breadboard and connected to the Arduino board in order to get this final result:
 
+![Final output on OLED](Final-Setup/finaloutputoled.gif)
 
 ### Project Objectives
 - Set up the DHT22 sensor with the Arduino to check that it functions properly.  
