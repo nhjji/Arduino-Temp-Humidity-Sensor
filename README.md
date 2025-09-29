@@ -61,7 +61,7 @@ I followed this [tutorial by Paul McWhorter](https://www.youtube.com/watch?v=-Av
 
 Once again, start by hooking up the module to the board with a breadboard and dupont wires, as shown above, then you’ll need to download the Adafruit BusIO and RTClib libraries. After that, you’ll need to set the time and date once as shown in the code below. Please note that this module can also be equipped with a battery so that it can keep the time even when unplugged.
 
-The RTClib library I've linked [here](https://github.com/adafruit/RTClib/blob/master/examples/ds3231/ds3231.ino) has many examples for how to setup this module that I referred to to set this up in my own example code here
+The RTClib library I've linked [here](https://github.com/adafruit/RTClib/blob/master/examples/ds3231/ds3231.ino) has many examples for how to setup this module that I referred to to set this up in my own example code [here](DS3231-Setup/sketch_rtcsetup.ino).
 
 
 ### Setting up the OLED:
