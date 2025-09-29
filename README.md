@@ -98,4 +98,4 @@ Now all that’s left is to put it all together as shown in this diagram above, 
 
 - Paul McWhorter, _Arduino Tutorial 50: How to Connect and Use the DHT11 Temperature and Humidity Sensor_. [Youtube link](https://www.youtube.com/watch?v=-AvF2TsB2GI)
 - SolderedElectronics, *Soldered OLED Display Arduino Library*. [GitHub Repository](https://github.com/SolderedElectronics/Soldered-OLED-Display-Arduino-Library/tree/main)
-- Adafruit, *RTClib*. [GitHub repository](https://github.com/SolderedElectronics/Soldered-OLED-Display-Arduino-Library/tree/main)
+- Adafruit, *RTClib*. [GitHub repository](https://github.com/adafruit/RTClib/tree/master)
