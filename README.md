@@ -42,9 +42,7 @@ All can be downloaded in the Library Manager in the Arduino IDE.
 
 Start by hooking up the module to the board as shown above with a breadboard and some DuPont wires, then, download the DHT Sensor Library by Adafruit and the Adafruit Unified Sensor library in the Arduino IDE’S Library Manager. The next step is to program it, and below you’ll see how I turned it on and the output I got in the Serial Monitor.   
 
- 
-I followed a tutorial by Paul McWhorter to figure out how to set it up which is also linked below. 
-
+I followed this [tutorial by Paul McWhorter](https://www.youtube.com/watch?v=-AvF2TsB2GI) to figure out how to set this up.
 
 ### Setting up the DS3231:
 **Pin Connections:**
