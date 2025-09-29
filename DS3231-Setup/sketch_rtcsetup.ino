@@ -21,7 +21,8 @@ myRTC.begin();
   // set up date & time on RTC (Year, Month, Day, Hour, Minute, Seconds)
 // myRTC.adjust(DateTime(2025, 8, 7, 23, 5, 30));
   //if you already set the time but need to reset it use this:
-// myRTC.adjust(........);
+// for example:
+// myRTC.adjust(DateTime(F(__DATE__), F(__TIME__)));
 }
 
 void loop() {
