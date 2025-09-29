@@ -1,6 +1,7 @@
  # Temperature & Humidity Monitor
 
 ## Project Overview
+
 The goal of this project is to display the temperature and humidity along with an accurate date and time on an OLED screen that refreshes every second. 
 This could have many uses such as monitoring devices and components to make sure they don’t overheat or simply to make environmental observations. 
 Each module was set up and tested one by one to make sure each was working as it should, then it was all hooked up together on a breadboard and connected to the Arduino board in order to get this final result:
@@ -8,6 +9,7 @@ Each module was set up and tested one by one to make sure each was working as it
 ![Final output on OLED](Final-Setup/finaloutputoled.gif)
 
 ### Project Objectives
+
 - Set up the DHT22 sensor with the Arduino to check that it functions properly.  
 - Set up and configure the right date and time on the DS3231 clock module with the Arduino.  
 - Set up the OLED screen and test it with the Arduino.  
@@ -15,6 +17,7 @@ Each module was set up and tested one by one to make sure each was working as it
 - Display date, time, temperature, and humidity accurately on the OLED screen and have it update continuously.
 
 ### Components
+
 * Arduino Uno R3 (Clone/Compatible board) w/ USB-C cable: [AliExpress link](https://www.aliexpress.us/item/3256807149536177.html?invitationCode=M2Z4WmpJTUpwNmo2dmh1aDQ3TGJxZklSZFZpQWpVRjZMZzQxKzU1MVJVZWVQemFTZUJrNWVWT0s1MU1hdTAyWg&srcSns=sns_Copy&spreadType=socialShare&social_params=21948505516&bizType=ProductDetail&spreadCode=M2Z4WmpJTUpwNmo2dmh1aDQ3TGJxZklSZFZpQWpVRjZMZzQxKzU1MVJVZWVQemFTZUJrNWVWT0s1MU1hdTAyWg&aff_fcid=29958ca20822478a81153024c5cb4a09-1758824388982-06983-_mqwdyfL&tt=MG&aff_fsk=_mqwdyfL&aff_platform=default&sk=_mqwdyfL&aff_trace_key=29958ca20822478a81153024c5cb4a09-1758824388982-06983-_mqwdyfL&shareId=21948505516&businessType=ProductDetail&platform=AE&terminal_id=6a4296ada9bc4463b7c62df1927f5f9e&afSmartRedirect=y&gatewayAdapt=glo2usa4itemAdapt) - $3.52 USD  
 * DHT22 Digital Temperature & Humidity Sensor Module: [AliExpress link](https://www.aliexpress.us/item/2251832573586959.html?invitationCode=M2Z4WmpJTUpwNmlEbVJMOFdyNXdNZklSZFZpQWpVRjZMZzQxKzU1MVJVZWVQemFTZUJrNWVWT0s1MU1hdTAyWg&srcSns=sns_Copy&spreadType=socialShare&social_params=21936422706&bizType=ProductDetail&spreadCode=M2Z4WmpJTUpwNmlEbVJMOFdyNXdNZklSZFZpQWpVRjZMZzQxKzU1MVJVZWVQemFTZUJrNWVWT0s1MU1hdTAyWg&aff_fcid=60c36b6a139f4015843e53c858b0a6b5-1758827087625-02850-_mt4LseD&tt=MG&aff_fsk=_mt4LseD&aff_platform=default&sk=_mt4LseD&aff_trace_key=60c36b6a139f4015843e53c858b0a6b5-1758827087625-02850-_mt4LseD&shareId=21936422706&businessType=ProductDetail&platform=AE&terminal_id=6a4296ada9bc4463b7c62df1927f5f9e&afSmartRedirect=y&gatewayAdapt=glo2usa4itemAdapt) - $1.90 USD  
 * DS3231 Real-Time Clock Module: [AliExpress link](https://www.aliexpress.us/item/3256806957282138.html?invitationCode=M2Z4WmpJTUpwNmdGVXBCb2dsMzlSL0lSZFZpQWpVRjZMZzQxKzU1MVJVZWVQemFTZUJrNWVWT0s1MU1hdTAyWg&srcSns=sns_Copy&spreadType=socialShare&social_params=21948506328&bizType=ProductDetail&spreadCode=M2Z4WmpJTUpwNmdGVXBCb2dsMzlSL0lSZFZpQWpVRjZMZzQxKzU1MVJVZWVQemFTZUJrNWVWT0s1MU1hdTAyWg&aff_fcid=b379baa01e484ffa85aa4fa540ba9bac-1758824392893-08877-_mPZKycN&tt=MG&aff_fsk=_mPZKycN&aff_platform=default&sk=_mPZKycN&aff_trace_key=b379baa01e484ffa85aa4fa540ba9bac-1758824392893-08877-_mPZKycN&shareId=21948506328&businessType=ProductDetail&platform=AE&terminal_id=6a4296ada9bc4463b7c62df1927f5f9e&afSmartRedirect=y&gatewayAdapt=glo2usa4itemAdapt) - $1.70 USD  
@@ -29,6 +32,7 @@ All can be downloaded in the Library Manager in the Arduino IDE.
 ## Project Setup
 
 ### Setting up the DHT22:
+
 **Pin connections:**
 
 | DHT22 | Arduino |
@@ -46,6 +50,7 @@ Start by hooking up the module to the board as shown above with a breadboard and
 I followed this [tutorial by Paul McWhorter](https://www.youtube.com/watch?v=-AvF2TsB2GI) to figure out how to set this up.
 
 ### Setting up the DS3231:
+
 **Pin Connections:**
 
 | DS3231 | Arduino |
@@ -65,6 +70,7 @@ The RTClib library I've linked [here](https://github.com/adafruit/RTClib/blob/ma
 
 
 ### Setting up the OLED:
+
 **Pin Connections:**
 
 | OLED | Arduino |
@@ -78,17 +84,14 @@ The RTClib library I've linked [here](https://github.com/adafruit/RTClib/blob/ma
 
 ![Wiring for the OLED](OLED-Setup/OLED_wiring.PNG)
 
-This is the example code provided by the Adafruit SSD1306 library, you can access it after downloading it in the Arduino IDE along with the Adafruit GFX Library. After the download go  to File > Examples > Examples from Custom Libraries > Adafruit SSD1306 > ssd1306_128x64_spi. 
-This is the code you should see and output you get from it on the OLED.
-
-
+This is the example code provided by the Adafruit SSD1306 library, you can access it after downloading it in the Arduino IDE along with the Adafruit GFX Library. After the download go  to File > Examples > Examples from Custom Libraries > Adafruit SSD1306 > ssd1306_128x64_spi. You can also find it on their [GitHub page](https://github.com/SolderedElectronics/Soldered-OLED-Display-Arduino-Library/blob/main/examples/Drawing_Example/Drawing_Example.ino).
 
 ### Final product:
+
 **Wiring diagram:**
 
 ![Wiring of the final product](Final-Setup/Full_wiring.PNG)
 
 Now all that’s left is to put it all together as shown in this diagram above, to program it we simply need to start by getting all our readings from the sensor and clock, and automatically show it on the screen, then repeat the process and refresh the values every second.
-
-This is how it should look:
+[This is how I did it](
 
