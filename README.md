@@ -93,3 +93,9 @@ This is the example code provided by the Adafruit SSD1306 library, you can acces
 ![Wiring of the final product](Final-Setup/Full_wiring.PNG)
 
 Now all that’s left is to put it all together as shown in this diagram above, to program it we simply need to start by getting all our readings from the sensor and clock, and automatically show it on the screen, then repeat the process and refresh the values every second. [This is how I did it](Temp&HumidityDisplay).
+
+## References:
+
+- Paul McWhorter, _Arduino Tutorial 50: How to Connect and Use the DHT11 Temperature and Humidity Sensor_. [Youtube link](https://www.youtube.com/watch?v=-AvF2TsB2GI)
+- SolderedElectronics, *Soldered OLED Display Arduino Library*. [GitHub Repository](https://github.com/SolderedElectronics/Soldered-OLED-Display-Arduino-Library/tree/main)
+- Adafruit, *RTClib*. [GitHub repository](https://github.com/SolderedElectronics/Soldered-OLED-Display-Arduino-Library/tree/main)
